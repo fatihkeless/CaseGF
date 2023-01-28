@@ -18,8 +18,9 @@ public class PlayerControl : MonoBehaviour
 
     [SerializeField] private List<GameObject> playerList = new List<GameObject>();
 
+    [Range(0f, 1f)] [SerializeField] private float distanceFactor;
 
-    [Range(0f, 1f)] [SerializeField] private float distanceFactor, radius = 0.854f;
+    [Range(0f, 1f)] [SerializeField] private float radius;
 
     [SerializeField] private Camera mainCam;
 

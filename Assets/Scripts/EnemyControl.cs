@@ -18,7 +18,9 @@ public class EnemyControl : MonoBehaviour
     [SerializeField] private List<GameObject> enemyList = new List<GameObject>();
 
 
-    [Range(0f, 1f)] [SerializeField] private float distanceFactor, radius = 1f;
+    [Range(0f, 1f)] [SerializeField] private float distanceFactor;
+
+    [Range(0f, 1f)] [SerializeField] private float radius;
 
     private GameObject playerControlObj;
     private PlayerControl _playerControl;
@@ -134,6 +136,7 @@ public class EnemyControl : MonoBehaviour
             Vector3 newPosition = new Vector3(x, 0f, z);
 
             enemyList[i].transform.DOLocalMove(newPosition, 1f);
+
         }
     }
 
